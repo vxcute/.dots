@@ -1,0 +1,14 @@
+super + o 
+  firefox
+
+super + shift + z
+  zathura
+
+super + Print
+  scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png
+
+super + shift + Print
+  scrot --select ~/Pictures/%Y-%m-%d-%T-_sel_screenshot.png
+
+super + shift + p
+  /home/vxcute/scripts/powermenu.py
