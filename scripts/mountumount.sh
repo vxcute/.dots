@@ -19,9 +19,18 @@ lsblk -dpni | grep -o '/dev/sd[b-z]' |
     count=$(($count + 1))
   done 
   dev=$(echo -e $devs | head -n$count | dmenu)
+  
+  if [[ $dev = "" ]]; then 
+    exit 
+  fi
+
   devfile=$(echo $dev | awk '{print $1}')
   devname=$(echo $dev | cut -d ' ' -f 2-)
   opt=$(echo -e "Mount\nUmount" | dmenu)
+
+  if [[ $opt = "" ]]; then 
+    exit
+  fi
 
   if [[ $opt = "Mount" ]]; then 
     echo $devname
