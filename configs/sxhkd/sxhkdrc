@@ -1,0 +1,14 @@
+super + Return 
+	st
+super + w
+	firefox 
+super + p
+	dmenu_run
+super + {plus,minus,equal}
+  /home/vxcute/src/scripts/vol-control.sh {raise,lower,toggle}
+super + shift + m
+  /home/vxcute/src/scripts/mountumount.sh 
+super + shift + p
+  /home/vxcute/src/scripts/powermenu.sh
+super + shift + e 
+  emacsclient -n -c 'emacs'
