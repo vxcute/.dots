@@ -18,7 +18,7 @@ lsblk -dpni | grep -o '/dev/sd[b-z]' |
     devs+="$line $(lsblk -o VENDOR,MODEL $line | awk 'NR==2') ($mounted)\n"
     count=$(($count + 1))
   done 
-  dev=$(echo -e $devs | head -n$count | dmenu)
+  dev=$(echo -e $devs | head -n$count | dmenu -l 10)
   
   if [[ $dev = "" ]]; then 
     exit 
@@ -26,7 +26,7 @@ lsblk -dpni | grep -o '/dev/sd[b-z]' |
 
   devfile=$(echo $dev | awk '{print $1}')
   devname=$(echo $dev | cut -d ' ' -f 2-)
-  opt=$(echo -e "Mount\nUmount" | dmenu)
+  opt=$(echo -e "Mount\nUmount" | dmenu -l 10)
 
   if [[ $opt = "" ]]; then 
     exit
