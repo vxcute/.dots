@@ -1,8 +1,0 @@
-super + Return 
-	st
-super + w
-	firefox 
-super + p
-	dmenu_run
-super + {plus,minus,equal}
-  /home/vxcute/src/scripts/vol-control.sh {raise,lower,toggle}

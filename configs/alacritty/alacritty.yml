@@ -37,7 +37,7 @@ colors:
 
   # Normal colors
   normal:
-    black: '#282828'
+    black: '#272727'
     red: '#cc241d'
     green: '#98971a'
     yellow: '#d79921'
@@ -60,8 +60,10 @@ theme: Gruvbox-Dark
 
 font:
   normal:
-    family: JetBrainsMono Nerd Font
+    family: Iosevka
     style: Bold
-    size: 9
+    size: 12
 
-shell: /usr/local/bin/fish
+shell: /usr/bin/zsh
+window:
+  opacity: 0.9
