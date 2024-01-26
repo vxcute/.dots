@@ -65,12 +65,12 @@ static const char unknown_str[] = "n/a";
  */
 
 static const struct arg args[] = {
-  { cpu_perc, "CPU: %s%% | ", NULL },
+  { cpu_perc, "[CPU: %s%% | ", NULL },
+  { ram_used, "RAM: %s | ", NULL },
   { battery_perc, "BAT: %s%% (", "BAT0"},
   { battery_state, "%s) | ", "BAT0"},
-  { ram_used, "RAM: %s | ", NULL },
   { run_command, "VOL: %s%% | ", "pamixer --get-volume" },
   { keymap, "%s | ", NULL },
   { datetime, "%s", "%d %b, %a | "},
-  { datetime, "%s", "%I:%M %p"},
+  { datetime, "%s]", "%I:%M %p"},
 };
