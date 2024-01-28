@@ -44,6 +44,32 @@ get_layout(char *syms, int grp_num)
 	return layout;
 }
 
+char* 
+upper_str(char* str) {
+  size_t slen = strlen(str); 
+  char* caps = malloc(slen + 1);
+  
+  if(caps == NULL) {
+    return NULL;
+  }
+
+  memset(caps, 0, slen);
+
+  for(size_t i = 0; i < slen; i++) {
+
+    if(str[i] >= 'A' && str[i] <= 'Z') {
+      caps[i] = str[i];
+      continue;
+    }
+
+    caps[i] = str[i] - ' ';
+  }
+
+  caps[slen] = '\0';
+
+  return caps;
+}
+
 const char *
 keymap(const char *unused)
 {
@@ -75,7 +101,7 @@ keymap(const char *unused)
 		warn("XGetAtomName: Failed to get atom name");
 		goto end;
 	}
-	layout = bprintf("%s", get_layout(symbols, state.group));
+	layout = bprintf("%s", upper_str(get_layout(symbols, state.group)));
 	XFree(symbols);
 end:
 	XkbFreeKeyboard(desc, XkbSymbolsNameMask, 1);

@@ -5,9 +5,6 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-// static char *font =
-//   "Iosevka:style:Bold:pixelsize=22:antialias=true:autohint=true";
-
 static char *font =
     "Iosevka:style:Bold:pixelsize=22:antialias=true:autohint=true";
 static int borderpx = 2;
@@ -97,47 +94,26 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
-// static const char *colorname[] = {
-//     /* 8 normal colors */
-//     [0] = "#292929", /* hard contrast: #1d2021 / soft contrast: #32302f */
-//     [1] = "#cc241d", /* red     */
-//     [2] = "#eeeeee", /* green   */
-//     [3] = "#d79921", /* yellow  */
-//     [4] = "#458588", /* blue    */
-//     [5] = "#b16286", /* magenta */
-//     [6] = "#689d6a", /* cyan    */
-//     [7] = "#a89984", /* white   */
-//
-//     /* 8 bright colors */
-//     [8] = "#292929",  /* black   */
-//     [9] = "#fb4934",  /* red     */
-//     [10] = "#43492A", /* green   */
-//     [11] = "#fabd2f", /* yellow  */
-//     [12] = "#83a598", /* blue    */
-//     [13] = "#d3869b", /* magenta */
-//     [14] = "#8ec07c", /* cyan    */
-//     [15] = "#43492A", /* white   */
-// };
 
 static const char *colorname[] = {
-    "#292929", // background
-    "#727743", // foreground
-    "#b5bd68", // black
-    "#727743", // red
-    "#bb7744", // green
-    "#f0c674", // yellow
-    "#bb7744", // blue
-    "#b294bb", // magenta
-    "#bb7744", // cyan
-    "#a3685a", // white
-    "#a3685a", // bright black
+    "#292929", 
+    "#727743", 
+    "#b5bd68", 
+    "#727743", 
+    "#bb7744", 
+    "#f0c674", 
+    "#bb7744", 
+    "#b294bb", 
+    "#bb7744", 
+    "#a3685a", 
+    "#a3685a", 
     "#727743",
-    "#f0c674", // bright green
-    "#de935f", // bright yellow
-    "#b5bd68", // bright blue
-    "#727743", // bright magenta
-    "#bb7744", // bright cyan
-    "#c5c8c6", // bright white
+    "#f0c674", 
+    "#de935f", 
+    "#b5bd68", 
+    "#727743", 
+    "#bb7744", 
+    "#c5c8c6", 
 };
 
 /*
